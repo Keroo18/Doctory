@@ -15,7 +15,7 @@ class TextButtonWidget extends StatelessWidget{
       onPressed: onPressed,
       style: TextButton.styleFrom(
         padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 12.h),
-        overlayColor: Colors.transparent, // todo
+        overlayColor: Colors.transparent,
         backgroundColor:
         Colors.transparent, // Make the button's background transparent
       ),

@@ -1,3 +1,5 @@
+import 'package:doctory001/core/helpers/extentions.dart';
+import 'package:doctory001/core/navigations/routes.dart';
 import 'package:doctory001/core/theming/text_styles.dart';
 import 'package:doctory001/core/widgets/text_button_widget.dart';
 import 'package:doctory001/features/onboarding/widgets/doc_image_and_text.dart';
@@ -40,7 +42,9 @@ class OnboardingScreen extends StatelessWidget {
                       height: 30.h,
                     ),
                     TextButtonWidget(
-                      onPressed: () {},
+                      onPressed: () {
+                        context.pushNamed(Routes.loginScreen);
+                      },
                       text: "Get Started",
                     ),
                   ],

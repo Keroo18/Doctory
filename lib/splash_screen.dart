@@ -1,4 +1,12 @@
+import 'dart:async';
+
+import 'package:doctory001/core/helpers/extentions.dart';
+import 'package:doctory001/core/theming/app_color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'core/navigations/routes.dart';
+import 'core/theming/text_styles.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -11,16 +19,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
-
-      // Future.value([
-      //   ServicesLocator.curantReservationCubit.getCurantReservation(),
-      //   ServicesLocator.articaleCubit.getAllArticale(),
-      //   ServicesLocator.clinicCubit.getClinic(),
-      //   ServicesLocator.loginCubit.getUnreadNotification(),
-      // ]);
-      // context.pushReplacementNamed(homeScreen);
-    });
+    Timer (
+      const Duration(seconds: 3),
+      () {
+        context.pushReplacementNamed(Routes.onBoardingScreen);
+      },
+    );
   }
 
   @override
@@ -30,17 +34,33 @@ class _SplashScreenState extends State<SplashScreen> {
         width: MediaQuery.sizeOf(context).width,
         height: MediaQuery.sizeOf(context).height,
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
+          image: DecorationImage(
+            image: AssetImage(
+                'assets/images/pngs/logo.png',
 
+            ),
+            fit: BoxFit.contain,
+            opacity: .15,
+            colorFilter: ColorFilter.mode(AppColor.primaryColor, BlendMode.srcIn),
+          )
+        ),
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/images/pngs/logo.png',
+                fit: BoxFit.fill,
+                color: AppColor.primaryColor,
+                height: 100.h,
+                width: 100.w,
+              ),
+              Text(
+                'Doctory',
+                style: TextStyles.font50black700weight,
+              ),
             ],
           ),
-        ),
-        child: Image.asset(
-          'assets/images/icons/main_logo.png',
-          fit: BoxFit.none,
         ),
       ),
     );
