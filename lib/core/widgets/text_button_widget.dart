@@ -7,14 +7,15 @@ class TextButtonWidget extends StatelessWidget{
   final void Function()? onPressed;
   final String text;
   final bool? withIcon;
-  const TextButtonWidget({super.key, required this.onPressed,required this.text, this.withIcon=true});
+  final EdgeInsetsGeometry? padding;
+  const TextButtonWidget({super.key, required this.onPressed,required this.text, this.withIcon=true, this.padding});
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
       style: TextButton.styleFrom(
-        padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 12.h),
+        padding: padding ?? EdgeInsets.symmetric(vertical: 10.h, horizontal: 12.h),
         overlayColor: Colors.transparent,
         backgroundColor:
         Colors.transparent, // Make the button's background transparent

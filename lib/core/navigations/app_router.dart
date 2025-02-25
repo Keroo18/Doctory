@@ -1,5 +1,5 @@
 import 'package:doctory001/core/navigations/routes.dart';
-import 'package:doctory001/features/login/presentation/login_screen.dart';
+import 'package:doctory001/features/login/presentation/screens/login_screen.dart';
 import 'package:doctory001/features/onboarding/onboarding_screen.dart';
 import 'package:doctory001/splash_screen.dart';
 import 'package:flutter/material.dart';
