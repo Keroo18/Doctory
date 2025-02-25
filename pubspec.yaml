@@ -50,6 +50,7 @@ dependencies:
   #---------------~Animations~---------------
   # Render After Effects animations natively on Flutter.
   lottie: ^3.3.1
+  animate_do: ^4.1.1
 
   #---------------~Firebase~---------------
   firebase_core: ^3.11.0

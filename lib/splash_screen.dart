@@ -50,10 +50,10 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               Image.asset(
                 'assets/images/pngs/logo.png',
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
                 color: AppColor.primaryColor,
-                height: 100.h,
-                width: 100.w,
+                height: 80,
+                width: 80,
               ),
               Text(
                 'Doctory',
