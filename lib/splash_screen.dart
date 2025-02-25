@@ -3,8 +3,6 @@ import 'dart:async';
 import 'package:doctory001/core/helpers/extentions.dart';
 import 'package:doctory001/core/theming/app_color.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'core/navigations/routes.dart';
 import 'core/theming/text_styles.dart';
 

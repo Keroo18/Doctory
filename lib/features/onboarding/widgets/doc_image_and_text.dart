@@ -19,7 +19,7 @@ class DocImageAndText extends StatelessWidget {
           color: AppColor.primaryColor.withOpacity(.4),
         ),
         Container(
-          height: 400.h,
+          height: 450.h,
           foregroundDecoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
@@ -31,15 +31,9 @@ class DocImageAndText extends StatelessWidget {
               stops: const [.4, 0.8],
             ),
           ),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/pngs/doc_woman_vector.png'),
-            ),
-          ),
-          child: FadeInDown(
-            from: -100.h,
-            curve: Curves.easeInOut,
-
+          child:FadeInUp(
+            duration: Duration(milliseconds: 600),
+            from: 100, // Move it off-screen initially
             child: Image.asset(
               'assets/images/pngs/doc_woman_vector.png',
             ),
@@ -47,9 +41,10 @@ class DocImageAndText extends StatelessWidget {
         ),
         Positioned(
           bottom: 10.h,
-          child: FadeInDown(
-            from: -50.h,
-            curve: Curves.easeInOut,
+          child: BounceIn(
+            duration:   Duration(seconds: 2),
+            delay: Duration(milliseconds: 600),
+            animate: true,
             child: Text(
               'Book Today\nSmile Brighter Tomorrow',
               textAlign: TextAlign.center,
