@@ -31,6 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            verticalSpace(50),
             Text(
               'Welcome Back',
               style: TextStyles.font25primary700weight,
@@ -40,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
               'We\'re excited to have you back, can\'t wait to see what you \'ve been up to since you last logged in.',
               style: TextStyles.font14gray500weight,
             ),
-            verticalSpace(30),
+            verticalSpace(40),
             Form(
               child: Column(
                 children: [
@@ -104,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   ),
                   TextButtonWidget(
-                    padding: EdgeInsets.symmetric(vertical: 25.h,),
+                    padding: EdgeInsets.symmetric(vertical: 30.h,),
                     text: 'Login',
                     withIcon: false,
                     onPressed: () {
